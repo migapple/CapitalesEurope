@@ -1,0 +1,17 @@
+{
+  "appId": "com.michel.garlandat.capitales",
+  "appName": "Capitales d'Europe",
+  "webDir": "public",
+  "backgroundColor": "#0e0e0e",
+  "ios": {
+    "contentInset": "always",
+    "backgroundColor": "#0e0e0e"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "#0e0e0e",
+      "showSpinner": false
+    }
+  }
+}
