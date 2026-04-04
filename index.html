@@ -934,7 +934,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <span class="sttl" id="settTitle">Réglages</span>
       <button class="sclose" onclick="document.getElementById('settingsOverlay').classList.remove('on')">✕</button>
     </div>
-    <div class="srow"><span class="srow-label" id="settAboutLabel">À propos</span><span class="srow-val">1.1</span></div>
+    <div class="srow"><span class="srow-label" id="settAboutLabel">À propos</span><span class="srow-val">1.0</span></div>
     <div class="srow"><span class="srow-label">© Michel Garlandat 2026</span></div>
     <div class="srow"><span class="srow-label" id="settMadeWith">Fait avec Anthropic Claude</span></div>
     <div class="srow"><span class="srow-label" id="settPrivacy">Données</span><span class="srow-val" id="settNoData">Aucune collectée</span></div>
@@ -1620,8 +1620,7 @@ function initMainMap() {
     marker.bindPopup(
       "<div class='map-popup-title'>"+c.nom[lang]+"</div>"+
       "<div class='map-popup-sub'>"+c.pays[lang]+"</div>"+
-      "<div class='map-popup-btn' onclick='openModal("+c.id+")'>"+
-      (lang==="fr"?"Découvrir →":"Explore →")+"</div>",
+      "<div class='map-popup-btn' onclick=\"goTo('detail',CAPITALES.find(function(x){return x.id==="+c.id+";}))\">"+(lang==="fr"?"Découvrir →":"Explore →")+"</div>",
       {maxWidth:180, minWidth:150}
     );
     mainMapMarkers.push({c:c, marker:marker});
